@@ -1,0 +1,15 @@
+langchain
+langchain-community
+langchain-openai
+chromadb
+rank-bm25
+sentence-transformers
+streamlit
+pypdf
+arxiv
+boto3
+python-dotenv
+deepeval
+tiktoken
+langchain-groq
+google-generativeai

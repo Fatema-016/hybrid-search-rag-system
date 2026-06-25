@@ -1,0 +1,10 @@
+.env
+__pycache__/
+*.pyc
+chroma_db/
+data/raw_pdfs/*
+!data/raw_pdfs/.gitkeep
+data/arxiv_cache/*
+!data/arxiv_cache/.gitkeep
+.ipynb_checkpoints/
+*.egg-info/
