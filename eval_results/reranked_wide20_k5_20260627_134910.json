@@ -1,0 +1,96 @@
+{
+  "weights": [
+    0.6,
+    0.4
+  ],
+  "k": 5,
+  "avg_faithfulness": 0.9238095238095239,
+  "avg_context_precision": 0.5761904761904761,
+  "avg_context_recall": 0.9285714285714286,
+  "results": [
+    {
+      "question": "What was the average rank gain for DeepSeek-V3.2 under instructive injection in a homogeneous candidate pool?",
+      "paper": "Prompt Injection in Automated R\u00e9sum\u00e9 Screening",
+      "known_gap": false,
+      "expected_output": "The average rank gain for DeepSeek-V3.2 under instructive injection in a homogeneous candidate pool was 4.086.",
+      "actual_output": "The average rank gain for DeepSeek-V3.2 under instructive injection in a homogeneous candidate pool was 4.086 [1].",
+      "faithfulness_score": 1.0,
+      "context_precision_score": 0.75,
+      "context_recall_score": 1.0,
+      "faithfulness_reason": "The score is 1.00 because there are no contradictions, indicating the actual output is fully faithful to the retrieval context.",
+      "context_recall_reason": "The score is 1.00 because the expected output is fully supported by node 1 in retrieval context, which directly states the average rank gain of 4.086 for DeepSeek-V3.2."
+    },
+    {
+      "question": "Was the difference between HQ and LQ candidates statistically significant under descriptive injection, and what was the p-value?",
+      "paper": "Prompt Injection in Automated R\u00e9sum\u00e9 Screening",
+      "known_gap": false,
+      "expected_output": "The difference between HQ and LQ candidates under descriptive injection was statistically significant, with p = 1.64x10^-17.",
+      "actual_output": "Yes, the difference between HQ and LQ candidates was statistically significant under descriptive injection [1][2]. The p-value was 1.64\u00d710\u221217 [1][2].",
+      "faithfulness_score": 1.0,
+      "context_precision_score": 0.7,
+      "context_recall_score": 1.0,
+      "faithfulness_reason": "The score is 1.00 because there are no contradictions, indicating that the actual output is fully faithful to the retrieval context.",
+      "context_recall_reason": "The score is 1.00 because the expected output is fully supported by node 1 in retrieval context, which explicitly mentions the HQ\u2013LQ difference being statistically significant with p = 1.64\u00d710\u207b\u00b9\u2077."
+    },
+    {
+      "question": "What models were compared in the r\u00e9sum\u00e9 screening study, and what job role was used?",
+      "paper": "Prompt Injection in Automated R\u00e9sum\u00e9 Screening",
+      "known_gap": true,
+      "expected_output": "DeepSeek-V3.2 and GPT-4o-mini were compared; the job role was IT Support Specialist.",
+      "actual_output": "The study compared models in the context of Large Language Models (LLMs) [1][2], but it does not specify the exact models being compared. The job role used in the study was an \"IT support specialist\" [3].",
+      "faithfulness_score": 0.6666666666666666,
+      "context_precision_score": 0.3333333333333333,
+      "context_recall_score": 0.5,
+      "faithfulness_reason": "The score is 0.67 because the actual output introduces the idea that the study compared models in the context of Large Language Models, which is not supported by the retrieval context. While the retrieval context mentions LLM-mediated screening, it does not confirm any model comparisons, leading to partial alignment.",
+      "context_recall_reason": "The score is 0.50 because the reference to 'IT Support Specialist' in the expected output is supported by the 3rd node in retrieval context, which states 'fixed IT support specialist job description,' but there is no mention of comparative analysis between 'DeepSeek-V3.2' and 'GPT-4o-mini' in the retrieval context."
+    },
+    {
+      "question": "What was GPT-4o-mini's success rate under descriptive injection in a homogeneous candidate pool?",
+      "paper": "Prompt Injection in Automated R\u00e9sum\u00e9 Screening",
+      "known_gap": false,
+      "expected_output": "GPT-4o-mini's success rate under descriptive injection in a homogeneous candidate pool was 7.4%.",
+      "actual_output": "GPT-4o-mini's success rate under descriptive injection in a homogeneous candidate pool was 7.4% [1].",
+      "faithfulness_score": 1.0,
+      "context_precision_score": 0.9166666666666666,
+      "context_recall_score": 1.0,
+      "faithfulness_reason": "The score is 1.00 because there are no contradictions, indicating the actual output aligns perfectly with the retrieval context.",
+      "context_recall_reason": "The score is 1.00 because the sentence can be directly attributed to the 1st node in retrieval context, which provides the exact information about GPT-4o-mini's success rate of 7.4% under descriptive injection."
+    },
+    {
+      "question": "What does AR-RAG propose for image generation?",
+      "paper": "AR-RAG",
+      "known_gap": false,
+      "expected_output": "AR-RAG proposes Autoregressive Retrieval Augmentation, incorporating k-nearest-neighbor retrievals at the image patch level during autoregressive generation.",
+      "actual_output": "AR-RAG proposes a novel retrieval-augmented paradigm for image generation that dynamically and autoregressively incorporates patch-level k-nearest-neighbor (k-NN) retrievals throughout the generation process [1]. Specifically, it performs fine-grained, step-wise retrieval at the image patch level, leveraging the already-generated surrounding patches as localized queries to retrieve contextually similar patches from a pre-constructed patch-level database [1]. This approach enables context-aware retrievals at each generation step, using prior-generated patches as queries to retrieve and incorporate the most relevant patch-level visual references [3]. AR-RAG also introduces two parallel frameworks: Distribution-Augmentation in Decoding (DAiD) and Feature-Augmentation in Decoding (FAiD) [2][3], which enable the model to respond to evolving generation needs while avoiding limitations prevalent in existing methods [3].",
+      "faithfulness_score": 0.8,
+      "context_precision_score": 1.0,
+      "context_recall_score": 1.0,
+      "faithfulness_reason": "The score is 0.80 because the actual output incorrectly claims that AR-RAG introduces two parallel frameworks, whereas the retrieval context clarifies that it introduces DAiD and FAiD as separate strategies, not parallel frameworks.",
+      "context_recall_reason": "The score is 1.00 because the expected output is fully supported by the 1st node in the retrieval context, accurately quoting its key contribution of AR-RAG for patch-level k-NN retrievals during image generation."
+    },
+    {
+      "question": "What dataset was used in the AR-RAG ablation study?",
+      "paper": "AR-RAG",
+      "known_gap": true,
+      "expected_output": "The dataset used in the AR-RAG ablation study was Midjourney-10K.",
+      "actual_output": "The dataset used is not explicitly mentioned in the provided sources.",
+      "faithfulness_score": 1.0,
+      "context_precision_score": 0,
+      "context_recall_score": 1.0,
+      "faithfulness_reason": "The score is 1.00 because there are no contradictions present, indicating that the actual output is completely faithful to the retrieval context.",
+      "context_recall_reason": "The score is 1.00 because the phrase 'Midjourney-10K' is directly mentioned in node 1 in retrieval context, supporting the expected output."
+    },
+    {
+      "question": "Which university is one of the AR-RAG authors affiliated with?",
+      "paper": "AR-RAG",
+      "known_gap": false,
+      "expected_output": "One of the AR-RAG authors is affiliated with Virginia Tech.",
+      "actual_output": "One of the AR-RAG authors is affiliated with Virginia Tech [3], Meta [3], and UC Davis [3].",
+      "faithfulness_score": 1.0,
+      "context_precision_score": 0.3333333333333333,
+      "context_recall_score": 1.0,
+      "faithfulness_reason": "The score is 1.00 because the actual output aligns perfectly with the retrieval context, with no contradictions identified.",
+      "context_recall_reason": "The score is 1.00 because the information about one of the AR-RAG authors being affiliated with Virginia Tech is directly supported by the 3rd node in retrieval context."
+    }
+  ]
+}

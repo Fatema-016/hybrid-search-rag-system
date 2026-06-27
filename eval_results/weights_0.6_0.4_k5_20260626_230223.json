@@ -1,0 +1,96 @@
+{
+  "weights": [
+    0.6,
+    0.4
+  ],
+  "k": 5,
+  "avg_faithfulness": 1.0,
+  "avg_context_precision": 0.5857142857142857,
+  "avg_context_recall": 1.0,
+  "results": [
+    {
+      "question": "What was the average rank gain for DeepSeek-V3.2 under instructive injection in a homogeneous candidate pool?",
+      "paper": "Prompt Injection in Automated R\u00e9sum\u00e9 Screening",
+      "known_gap": false,
+      "expected_output": "4.086",
+      "actual_output": "The average rank gain for DeepSeek-V3.2 under instructive injection in a homogeneous candidate pool was 4.086 [1].",
+      "faithfulness_score": 1.0,
+      "context_precision_score": 1.0,
+      "context_recall_score": 1.0,
+      "faithfulness_reason": "The score is 1.00 because there are no contradictions, indicating the actual output aligns perfectly with the retrieval context.",
+      "context_recall_reason": "The score is 1.00 because the value '4.086' directly corresponds to the average rank gain of DeepSeek-V3.2 under instructive injection as stated in node 1 of the retrieval context."
+    },
+    {
+      "question": "Was the difference between HQ and LQ candidates statistically significant under descriptive injection, and what was the p-value?",
+      "paper": "Prompt Injection in Automated R\u00e9sum\u00e9 Screening",
+      "known_gap": false,
+      "expected_output": "Yes, statistically significant, p = 1.64x10^-17",
+      "actual_output": "The difference between HQ and LQ candidates was statistically significant under descriptive injection [2]. The p-value for rank gain was 1.64\u00d710\u221217 [2], and the p-value for success rate was 8.65\u00d710\u22129 [2].",
+      "faithfulness_score": 1.0,
+      "context_precision_score": 0.5,
+      "context_recall_score": 1.0,
+      "faithfulness_reason": "The score is 1.00 because the actual output aligns perfectly with the information presented in the retrieval context, with no contradictions found.",
+      "context_recall_reason": "The score is 1.00 because the sentence in the expected output is directly supported by the second node in the retrieval context, which explicitly states the statistical significance with p = 1.64\u00d710^-17."
+    },
+    {
+      "question": "What models were compared in the r\u00e9sum\u00e9 screening study, and what job role was used?",
+      "paper": "Prompt Injection in Automated R\u00e9sum\u00e9 Screening",
+      "known_gap": true,
+      "expected_output": "DeepSeek-V3.2 and GPT-4o-mini were compared; the job role was IT Support Specialist.",
+      "actual_output": "The study compared two Large Language Models (LLMs), specifically GPT-4o-mini and DeepSeek-V3.2 [5], in the context of an IT support specialist job description [1].",
+      "faithfulness_score": 1.0,
+      "context_precision_score": 0.2,
+      "context_recall_score": 1.0,
+      "faithfulness_reason": "The score is 1.00 because there are no contradictions, indicating the actual output is fully aligned with the retrieval context.",
+      "context_recall_reason": "The score is 1.00 because all elements from the expected output, such as 'DeepSeek-V3.2 and GPT-4o-mini' and 'IT Support Specialist,' are directly supported by node(s) in retrieval context, with perfect alignment and no missing information."
+    },
+    {
+      "question": "What was GPT-4o-mini's success rate under descriptive injection in a homogeneous candidate pool?",
+      "paper": "Prompt Injection in Automated R\u00e9sum\u00e9 Screening",
+      "known_gap": false,
+      "expected_output": "7.4%",
+      "actual_output": "GPT-4o-mini's success rate under descriptive injection in a homogeneous candidate pool was 7.4% [1][2].",
+      "faithfulness_score": 1.0,
+      "context_precision_score": 0.5,
+      "context_recall_score": 1.0,
+      "faithfulness_reason": "The score is 1.00 because the actual output is fully faithful to the retrieval context and there are no contradictions.",
+      "context_recall_reason": "The score is 1.00 because the expected output '7.4%' is directly found in node 2 of the retrieval context, which explicitly mentions it as a success rate."
+    },
+    {
+      "question": "What does AR-RAG propose for image generation?",
+      "paper": "AR-RAG",
+      "known_gap": false,
+      "expected_output": "AR-RAG proposes Autoregressive Retrieval Augmentation, incorporating k-nearest-neighbor retrievals at the image patch level during autoregressive generation.",
+      "actual_output": "AR-RAG proposes a novel paradigm that enhances image generation by autoregressively incorporating k-nearest neighbor retrievals at the patch level [1][5]. This approach performs context-aware retrievals at each generation step, unlike prior methods that perform a single, static retrieval before generation [5]. AR-RAG enables selective incorporation of relevant visual elements while maintaining independence from irrelevant contextual features present in the reference images [4]. The method uses image patches in red boxes to denote retrieval queries and keys, image patches in blue boxes as retrieved values, and gray boxes with a question mark to represent next image patches to be predicted [1][5].",
+      "faithfulness_score": 1.0,
+      "context_precision_score": 0.7000000000000001,
+      "context_recall_score": 1.0,
+      "faithfulness_reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context.",
+      "context_recall_reason": "The score is 1.00 because the expected output is fully captured by the first node in retrieval context, accurately describing the key concept of incorporating k-nearest-neighbor retrievals at the image patch level during generation."
+    },
+    {
+      "question": "What dataset was used in the AR-RAG ablation study?",
+      "paper": "AR-RAG",
+      "known_gap": true,
+      "expected_output": "Midjourney-10K",
+      "actual_output": "The answer is not contained in the provided sources.",
+      "faithfulness_score": 1.0,
+      "context_precision_score": 1.0,
+      "context_recall_score": 1.0,
+      "faithfulness_reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context.",
+      "context_recall_reason": "The score is 1.00 because the expected output is directly supported by node 1 in retrieval context, which mentions the effectiveness of patch-level retrieval in AR-RAG methods."
+    },
+    {
+      "question": "Which university is one of the AR-RAG authors affiliated with?",
+      "paper": "AR-RAG",
+      "known_gap": false,
+      "expected_output": "Virginia Tech",
+      "actual_output": "One of the AR-RAG authors is affiliated with Virginia Tech [5], Meta [5], and UC Davis [5].",
+      "faithfulness_score": 1.0,
+      "context_precision_score": 0.2,
+      "context_recall_score": 1.0,
+      "faithfulness_reason": "The score is 1.00 because there are no contradictions between the actual output and the retrieval context, indicating that the response is fully faithful to the information provided.",
+      "context_recall_reason": "The score is 1.00 because the term 'Virginia Tech' is directly found in the last node of the retrieval context, confirming its relevance without ambiguity."
+    }
+  ]
+}

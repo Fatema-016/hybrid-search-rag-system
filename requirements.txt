@@ -12,4 +12,10 @@ python-dotenv
 deepeval
 tiktoken
 langchain-groq
-google-generativeai
+google-genai
+requests
+langchain-huggingface
+langchain-huggingface
+langchain-chroma
+langchain-classic
+instructor
