@@ -1,0 +1,4 @@
+deepeval
+instructor
+google-genai
+-r requirements.txt

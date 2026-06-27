@@ -8,3 +8,5 @@ data/arxiv_cache/*
 !data/arxiv_cache/.gitkeep
 .ipynb_checkpoints/
 *.egg-info/
+.vscode/
+.deepeval/

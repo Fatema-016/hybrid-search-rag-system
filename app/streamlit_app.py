@@ -88,8 +88,9 @@ with st.sidebar:
 
 
 # ---------- Main panel: chat ----------
-st.title("AI/ML Research Assistant")
+st.title("AI/ML Research Paper Assistant")
 st.caption("Hybrid search (semantic + BM25) RAG over research papers, with grounded citations.")
+st.caption("Built by **Fatema Habil Saifuddin**")
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
