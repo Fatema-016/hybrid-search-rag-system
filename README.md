@@ -1,3 +1,12 @@
+---
+title: AI/ML Research Assistant
+emoji: 📚
+colorFrom: blue
+colorTo: purple
+sdk: docker
+pinned: false
+---
+
 # Knowledge Intelligence System: AI/ML Research Assistant
 
 A hybrid-search RAG system purpose-built for AI/ML research papers — combining semantic and keyword retrieval, grounded citations, and rigorous DeepEval-based evaluation.
