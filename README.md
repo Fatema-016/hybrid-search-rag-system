@@ -11,8 +11,7 @@ pinned: false
 
 A hybrid-search RAG system purpose-built for AI/ML research papers — combining semantic and keyword retrieval, grounded citations, and rigorous DeepEval-based evaluation.
 
-<!-- TODO (Phase 12): add live demo badge/link here once deployed, e.g.
-[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](YOUR_HF_SPACES_URL) -->
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://fatema-016-hybrid-search-rag-system.hf.space)
 
 ---
 
@@ -57,18 +56,9 @@ Research papers are dense, jargon-heavy, and full of exact figures, model names,
 | Paper sourcing | arXiv API |
 | Environment | Conda, Python 3.10 |
 | Containerization | Docker (multi-stage build, CPU-only PyTorch) |
+| Deployment | Hugging Face Spaces (Docker SDK, free CPU tier) |
 
-## Running Locally with Docker
 
-```bash
-docker build -t hybrid-rag-app .
-docker volume create rag-chroma-data
-docker run -p 8501:8501 --env-file .env -v rag-chroma-data:/app/chroma_db hybrid-rag-app
-```
-
-Then open `http://localhost:8501`.
-
-**Note:** use a named Docker volume (`rag-chroma-data`), not a bind mount to a local folder — bind-mounted SQLite databases (used internally by ChromaDB) can behave unreliably through Docker Desktop's Windows/WSL2 file-sharing layer.
 
 ## Methodology
 
@@ -177,4 +167,22 @@ I built and tested a reranker (`cross-encoder/ms-marco-MiniLM-L-6-v2`). It works
 
 
 
-<!-- TODO (Phase 12): add Docker run instructions and deployment section here -->
+## Running Locally with Docker
+
+```bash
+docker build -t hybrid-rag-app .
+docker volume create rag-chroma-data
+docker run -p 8501:8501 --env-file .env -v rag-chroma-data:/app/chroma_db hybrid-rag-app
+```
+
+Then open `http://localhost:8501`.
+
+**Note:** use a named Docker volume (`rag-chroma-data`).
+
+## Live Demo
+
+The app is deployed on Hugging Face Spaces (Docker SDK, free CPU tier): **[fatema-016-hybrid-search-rag-system.hf.space](https://fatema-016-hybrid-search-rag-system.hf.space)**
+
+![Live deployed app](docs/screenshots/live_demo_deployed.png)
+
+The screenshot above shows the publicly deployed instance — note the `.hf.space` URL in the browser bar, a real chat exchange with grounded citations, and the byline confirming this is the live, hosted version.
